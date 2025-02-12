@@ -76,7 +76,7 @@ Réponse attendue :
 
 ### Sentiment Négatif
 
-![Sentiment Négatif]([ScreenShots](https://github.com/manal-herradi/images/blob/859b0fc0e6ab747375d1bc8a3e1df17276e37173/negative.png)
+![Sentiment Négatif](https://github.com/manal-herradi/images/blob/859b0fc0e6ab747375d1bc8a3e1df17276e37173/negative.png)
 
 ### Sentiment Neutre
 ![Sentiment Neutre](https://github.com/manal-herradi/images/blob/859b0fc0e6ab747375d1bc8a3e1df17276e37173/Neutral.png)
