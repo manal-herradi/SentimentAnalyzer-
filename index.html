@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Analyse des Sentiments</title>
+    <link rel="stylesheet" href="static\styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Analyse des Sentiments</h1>
+        <form id="form">
+            <label for="review">Entrez votre avis :</label><br>
+            <textarea id="review" placeholder="Écrivez votre avis ici..."></textarea><br>
+            <button type="submit">Analyser</button>
+        </form>
+        <h2>Sentiment : <span id="result"></span></h2>
+        <div id="emoji"></div>
+    </div>
+
+    <script>
+        document.getElementById("form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            let reviewText = document.getElementById("review").value;
+            fetch('http://127.0.0.1:5000/analyze', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({ text: reviewText })
+            })
+            .then(response => response.json())
+            .then(data => {
+                const sentiment = data.sentiment;
+                document.getElementById("result").textContent = sentiment;
+
+                // Ajouter un emoji en fonction du sentiment
+                let emoji = "";
+                if (sentiment === "positive") {
+                    emoji = "😊"; // Emoji positif
+                } else if (sentiment === "negative") {
+                    emoji = "😞"; // Emoji négatif
+                } else {
+                    emoji = "😐"; // Emoji neutre
+                }
+                document.getElementById("emoji").textContent = emoji;
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>
