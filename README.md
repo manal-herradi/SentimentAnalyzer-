@@ -76,13 +76,13 @@ Réponse attendue :
 
 ### Sentiment Négatif
 
-![Sentiment Négatif](/negative.png)
+![Sentiment Négatif](ScreenShots/negative.png)
 
 ### Sentiment Neutre
-![Sentiment Neutre](/Neutral.png)
+![Sentiment Neutre](ScreenShots/Neutral.png)
 
 ### Sentiment Positif
-![Sentiment Positif](/Positive.png)
+![Sentiment Positif](ScreenShots/Positive.png)
 
 ## Structure du projet
 
